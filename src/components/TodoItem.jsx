@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux';
 import { removeTodo } from '../features/todoSlice';
 
 const TodoItem = ({item}) => {
+
+  const dispatch = useDispatch()
   const removeItem = () => {
-    useDispatch(removeTodo(item.id))
+    dispatch(removeTodo(item.id))
   }
    return (
     <div>
