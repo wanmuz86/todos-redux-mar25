@@ -17,5 +17,6 @@ const todoSlice = createSlice({
     }  
 })
 
+// export it to be imported by the components
 export const {addTodo,removeTodo} = todoSlice.actions
 export default todoSlice.reducer
