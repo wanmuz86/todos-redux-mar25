@@ -1,8 +1,11 @@
 import React from 'react'
 import TodoItem from './TodoItem'
 
+import { useSelector } from 'react-redux'
+
 const TodoList = () => {
-    const todos = ["Learn React","Learn State Management","Learn API Call"]
+  // Retrieve the todos from the redux state and 
+    const todos = useSelector((state)=> state.todos);
   return (
     <div>
         <h2>List To Do</h2>
