@@ -1,8 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const Add = () => {
+    const [todoItem, setTodoItem] = useState('')
   return (
-    <div>Add</div>
+    <div>
+        <h2>Add new Todo</h2>
+        <input type="text" placeholder='Add item to add' 
+        value={todoItem} onChange={(e)=> setTodoItem(e.target.value)}/>
+        <button>Add Todo</button>
+    </div>
   )
 }
 
